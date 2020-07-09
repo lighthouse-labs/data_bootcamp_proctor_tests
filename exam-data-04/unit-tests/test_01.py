@@ -1,9 +1,5 @@
 import pytest
-
-import sys
-sys.path.append("..")
-
-from questioncode.question_01 import even_odd_transform
+from answers.question_01 import even_odd_transform
 
 def test_on_return_list():
     assert type(even_odd_transform([3, 4, 9], 3)) == list

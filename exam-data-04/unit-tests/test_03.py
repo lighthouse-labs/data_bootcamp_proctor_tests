@@ -1,12 +1,12 @@
+import pytest
 import pandas as pd
+from answers.question_03 import compute_agg_stats
 import sys
 sys.path.append("..")
 
-from questioncode.question_03 import compute_agg_stats
 
 df = pd.read_excel('../supporting-files/SaleData.xlsx')
 
-import pytest
 
 def test_on_data_type():
     assert isinstance(compute_agg_stats(df), pd.DataFrame)

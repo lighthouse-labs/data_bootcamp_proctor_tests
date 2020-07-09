@@ -1,8 +1,5 @@
 import pytest
-import sys
-sys.path.append("..")
-
-from questioncode.question_03 import reverse_capitalize
+from answers.question_03 import reverse_capitalize
 
 def test_on_string():
     assert type(reverse_capitalize("input")) == str

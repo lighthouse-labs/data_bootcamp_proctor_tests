@@ -1,8 +1,5 @@
 import pytest
-import sys
-sys.path.append("..")
-
-from questioncode.question_01 import mean
+from answers.question_01 import mean
 
 def test_on_number():
     res = type(mean(12345))

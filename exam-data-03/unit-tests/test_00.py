@@ -12,10 +12,7 @@ df = pd.DataFrame(data, index=labels)
 
 
 import pytest
-import sys
-sys.path.append("..")
-
-from questioncode.question_00 import filter_animals
+from answers.question_00 import filter_animals
 
 
 def test_on_return_type():

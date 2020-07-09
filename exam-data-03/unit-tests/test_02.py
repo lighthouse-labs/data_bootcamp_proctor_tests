@@ -11,10 +11,7 @@ d = {'Name':pd.Series(['Andres','James','David','Vin','Steve','David','Jack',
 df = pd.DataFrame(d)
 
 import pytest
-import sys
-sys.path.append("..")
-
-from questioncode.question_02 import compute_statistics
+from answers.question_02 import compute_statistics
 
 
 def test_on_return_tuple():

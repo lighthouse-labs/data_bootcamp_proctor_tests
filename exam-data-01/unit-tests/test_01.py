@@ -1,8 +1,5 @@
 import pytest
-import sys
-sys.path.append("..")
-
-from questioncode.question_01 import equal_slices
+from answers.question_01 import equal_slices
 
 def test_on_returns_tuple():
     assert type(equal_slices(11, 5, 2)) == tuple

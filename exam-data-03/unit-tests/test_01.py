@@ -12,10 +12,7 @@ df = pd.DataFrame(data, index=labels)
 
 
 import pytest
-import sys
-sys.path.append("..")
-
-from questioncode.question_01 import filter_dataframe
+from answers.question_01 import filter_dataframe
 
 def test_on_number_of_rows():
     assert filter_dataframe(df).shape[0] == 8

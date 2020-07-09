@@ -1,9 +1,5 @@
 import pytest
-
-import sys
-sys.path.append("..")
-
-from questioncode.question_00 import pie_chart
+from answers.question_00 import pie_chart
 
 def test_on_dictionary():
     assert type(pie_chart({ "a": 1, "b": 2 })) == dict

@@ -1,8 +1,5 @@
 import pytest
-import sys
-sys.path.append("..")
-
-from questioncode.question_00 import filter_list
+from answers.question_00 import filter_list
 
 def test_on_return():
     assert filter_list('abc123') is not None

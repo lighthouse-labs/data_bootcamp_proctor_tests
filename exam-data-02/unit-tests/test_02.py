@@ -1,8 +1,5 @@
 import pytest
-import sys
-sys.path.append("..")
-
-from questioncode.question_02 import count_all
+from answers.question_02 import count_all
 
 def test_on_dictionary():
     assert type(count_all("Hello World")) == dict

@@ -1,8 +1,5 @@
 import pytest
-import sys
-sys.path.append("..")
-
-from questioncode.question_00 import equal_slices
+from answers.question_00 import equal_slices
 
 def test_on_returns_any_value():
     assert equal_slices(8,3,2) is not None
