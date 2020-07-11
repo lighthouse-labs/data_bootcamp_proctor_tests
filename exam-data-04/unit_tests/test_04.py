@@ -1,10 +1,10 @@
 import pytest
-import sys
 import sqlite3
 import pandas as pd
-sys.path.append("..")
 from answers.question_04 import SQL
+from supporting_files.data_loader import load_data_from_database
 
+DB = 'supporting_files/hr.db'
 ANSWER_SQL = """SELECT d.department_id, 
                 d.department_name, 
                 e.first_name 
@@ -13,18 +13,18 @@ ANSWER_SQL = """SELECT d.department_id,
             ON d.department_id = e.department_id
          ORDER BY first_name"""
 
-with sqlite3.connect('../supporting-files/hr.db') as con:
-    df_answer = pd.read_sql(ANSWER_SQL, con)
+df_answer = load_data_from_database(ANSWER_SQL,DB)
 
 
 def test_on_valid_sql():
     global df_student
 
     try:
-        with sqlite3.connect('../supporting-files/hr.db') as con:
-            df_student = pd.read_sql(SQL,con)
+        df_student = load_data_from_database(SQL,DB)
     except:
-            df_student = pd.DataFrame()
+        df_student = pd.DataFrame()
+
+    assert not df_student.empty
 
 def test_on_number_of_rows():
     assert df_student.shape[0] == df_answer.shape[0]

@@ -1,11 +1,12 @@
 import pytest
 import pandas as pd
 from answers.question_03 import compute_agg_stats
-import sys
-sys.path.append("..")
+from supporting_files.data_loader import load_excel
+
+DB = 'supporting_files/hr.db'
 
 
-df = pd.read_excel('../supporting-files/SaleData.xlsx')
+df = load_excel('supporting-files/SaleData.xlsx')
 
 
 def test_on_data_type():

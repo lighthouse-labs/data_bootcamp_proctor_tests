@@ -1,10 +1,9 @@
 import pytest
 import pandas as pd
 from answers.question_02 import compute_total_sale
-import sys
-sys.path.append("..")
+from supporting_files.data_loader import load_excel
 
-df = pd.read_excel('../supporting-files/SaleData.xlsx')
+df = load_excel('supporting-files/SaleData.xlsx')
 
 
 def test_on_data_type():
