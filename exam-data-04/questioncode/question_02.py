@@ -1,8 +1,9 @@
 import pandas as pd
 import sys
-sys.path.append("..")
+from supporting_files.data_loader import load_excel
 
-df = pd.read_excel('../supporting-files/SaleData.xlsx')
+df = load_excel('supporting_files/SaleData.xlsx')
+
 
 """
 Write a Pandas program to find the total sale amount region wise, manager wise. 

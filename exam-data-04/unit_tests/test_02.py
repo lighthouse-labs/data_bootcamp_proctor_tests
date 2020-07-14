@@ -3,7 +3,8 @@ import pandas as pd
 from answers.question_02 import compute_total_sale
 from supporting_files.data_loader import load_excel
 
-df = load_excel('supporting-files/SaleData.xlsx')
+df = load_excel('supporting_files/SaleData.xlsx')
+
 
 
 def test_on_data_type():
