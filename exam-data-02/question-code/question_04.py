@@ -7,7 +7,6 @@ Expected columns:
     - first_name	
     - last_name	
     - department_id
-    - PF
 
 Notes:
     - You can connect to DB from Jupyter Lab/Notebook, explore the table and try different queries
